@@ -441,7 +441,8 @@ public class Vars implements Loadable{
     public static void loadSettings(){
         settings.setJson(JsonIO.json);
         settings.setAppName(appName);
-
+        settings.setDataDirectory(Core.files.local("./data/"));
+        
         if(steam || (Version.modifier != null && Version.modifier.contains("steam"))){
             settings.setDataDirectory(Core.files.local("saves/"));
         }
